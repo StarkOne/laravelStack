@@ -29,11 +29,6 @@ class User extends Authenticatable
     ];
 
     public function questions() {
-        return $this->belongsTo(QuestionModal::class);
-    }
-
-    public function setTitleAttribute($value) {
-        $this->attributes['title'] = $value;
-        $this->attributes['slug'] = str_slug($value);
+        return $this->belongsTo(Question::class);
     }
 }

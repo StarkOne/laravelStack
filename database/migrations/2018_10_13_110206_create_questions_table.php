@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQuestionModalsTable extends Migration
+class CreateQuestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateQuestionModalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('question_modals', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->string('slug')->unique();
@@ -36,6 +36,6 @@ class CreateQuestionModalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('question_modals');
+        Schema::dropIfExists('questions');
     }
 }
